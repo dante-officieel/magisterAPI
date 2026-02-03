@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magister Rooster Notificaties</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Magister Rooster Notificaties</h1>
+      <p>Log in met je Magister-account en ontvang automatisch meldingen bij roosterwijzigingen.</p>
+    </header>
+
+    <section id="login" class="card">
+      <h2>Inloggen</h2>
+      <form id="login-form">
+        <label>
+          Magister basis-URL (bijv. school.magister.net)
+          <input type="text" name="magisterBaseUrl" required />
+        </label>
+        <label>
+          E-mailadres voor notificaties
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Identity provider (optioneel, bijv. adfs.yuverta.nl)
+          <input type="text" name="identityProvider" />
+        </label>
+        <button type="submit">Start Magister login</button>
+      </form>
+      <p id="login-status" class="status"></p>
+    </section>
+
+    <section id="notifications" class="card hidden">
+      <h2>Recente meldingen</h2>
+      <ul id="notification-list"></ul>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
